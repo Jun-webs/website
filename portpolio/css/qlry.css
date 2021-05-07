@@ -1,0 +1,130 @@
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+nav > div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 0px;
+    position: relative;
+}
+nav > div > a.logo {
+    text-indent: -90000px;
+    overflow:hidden;
+    width: 150px;
+    height: 62px;
+    background: url(../img/logo.png) no-repeat;
+    margin-top: 15px;
+}
+nav > div > div{
+    width: 1100px;
+    height: 85px;
+    display: flex;
+    justify-content: flex-end;
+}
+nav > div > div > ul{
+    width: 380px;
+    height: 85px;
+    line-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav > div > div > ul > li{
+    position: relative;
+}
+nav > div  > div > ul > li::after{
+    width: 0%;
+    height: 3px;
+    background-color: rgb(242, 101, 34);
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top:54px;
+    left: 1px;
+}
+nav > div  > div > ul > li:hover::after{
+    width: 100%;
+    transition:  width 0.3s;
+}
+nav > div  > div > ul > li > a{
+    color: #eee;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+nav > div  > div > ul > li > a:hover{
+    color:  rgb(242, 101, 34);
+}
+nav > div.inner > div > ul > li > ul.subnav{
+    position: fixed;
+    top: 101px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 0px;
+    line-height: 0px;
+    overflow: hidden;
+    padding-left: 240px;
+}
+nav > div  > div > ul > li > ul.subnav > li{
+    height: 70px;
+    line-height: 70px;
+    margin-left: 110px;
+    list-style: none;
+}
+nav > div  > div > ul > li:hover > ul.subnav{
+    height: 70px;
+    line-height: 70px;
+    transition: height 0.5s;
+    background: white;
+}
+nav > div  > div > ul > li > ul.subnav > li > a{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(150,149,149);
+    text-decoration: none;
+}
+nav > div  > div > ul > li > ul.subnav > li > a:hover{
+    color: rgb(242, 101, 34)
+}
+nav > div > div > div >input.navsearchbox{
+    width: 0px;
+    height: 51px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 14px 0 0 20px;
+    position: relative;
+    right: 0;
+    border: none;
+}
+nav > div > div > div {
+    position: relative;
+}
+nav > div > div > div::after{
+    width: 50px;
+    height: 85px;
+    line-height: 85px;
+    content: '\f002';
+    font-size: 19px;
+    color: #eee;
+}
+nav > div > div:hover > div::after{
+    transform: scale(1.3,1.3);
+    transition: 1s;
+}
+nav > div > div > div::before{
+    display: none;
+}
+nav > div > div > div:hover > input.navsearchbox{
+    width: 400px;
+    transition: width 0.5s;
+    background: #eee;
+}
